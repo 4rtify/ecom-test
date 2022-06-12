@@ -9,6 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import "./index.scss";
 import { ProductProvider } from "./contexts/products.context";
+import { ShoppingCartProvider } from "./contexts/shopping-cart.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,7 +17,9 @@ root.render(
     <BrowserRouter>
       <UserProvider>
         <ProductProvider>
+          <ShoppingCartProvider>
           <App />
+          </ShoppingCartProvider>
         </ProductProvider>
       </UserProvider>
     </BrowserRouter>
