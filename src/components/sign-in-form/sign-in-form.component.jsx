@@ -19,9 +19,8 @@ const defaultFormFields = {
 };
 
 const logGoogleUser = async () => {
-  const { user } = await signInWithGooglePopup();
+  await signInWithGooglePopup();
 
-  const userDocRef = await createUserDocumentFromAuth(user);
 };
 
 const SignInForm = () => {
@@ -45,7 +44,7 @@ const SignInForm = () => {
         email,
         password
       );
-      console.log(user);
+
       resetFormFields();
     } catch (error) {
       switch(error.code) {
